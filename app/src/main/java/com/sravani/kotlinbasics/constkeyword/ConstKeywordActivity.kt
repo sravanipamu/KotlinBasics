@@ -1,4 +1,4 @@
-package com.sravani.kotlinbasics.constKeyword
+package com.sravani.kotlinbasics.constkeyword
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

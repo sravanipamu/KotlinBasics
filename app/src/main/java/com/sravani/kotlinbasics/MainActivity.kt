@@ -4,15 +4,21 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.sravani.kotlinbasics.constKeyword.ConstKeywordActivity
+import com.sravani.kotlinbasics.constkeyword.ConstKeywordActivity
 import com.sravani.kotlinbasics.data.DataClassActivity
+import com.sravani.kotlinbasics.extensionFunction.ExtensionFunctionActivity
+import com.sravani.kotlinbasics.generics.GenericsActivity
+import com.sravani.kotlinbasics.infix.InfixNotationActivity
+import com.sravani.kotlinbasics.init.InitBlockActivity
 import com.sravani.kotlinbasics.inline.InlineFunctionsActivity
+import com.sravani.kotlinbasics.jvmannotations.JVMAnnotationsActivity
 import com.sravani.kotlinbasics.lamdaHighOrder.LamdaHighOrderActivity
-import com.sravani.kotlinbasics.lateinitLazy.LateinitLazyActivity
+import com.sravani.kotlinbasics.lateinitlazy.LateinitLazyActivity
 import com.sravani.kotlinbasics.nullsafty.NullsaftyActivity
 import com.sravani.kotlinbasics.objects.ObjectCompanionObjectActivity
+import com.sravani.kotlinbasics.singletonpattern.SingletonActivity
 import com.sravani.kotlinbasics.variables.VariableActivity
-import com.sravani.kotlinbasics.visibilityModifier.VisibilityModifier
+import com.sravani.kotlinbasics.visibilitymodifier.VisibilityModifier
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,5 +62,29 @@ class MainActivity : AppCompatActivity() {
     fun dataClass(view: View) {
         startActivity(Intent(this, DataClassActivity::class.java))
     }
+
+    fun jvmAnnotations(view: View) {
+        startActivity(Intent(this, JVMAnnotationsActivity::class.java))
+    }
+
+     fun initBlock(view: View) {
+        startActivity(Intent(this, InitBlockActivity::class.java))
+    }
+
+    fun extensionFunction(view: View) {
+        startActivity(Intent(this, ExtensionFunctionActivity::class.java))
+    }
+
+    fun infixNotation(view: View) {
+        startActivity(Intent(this, InfixNotationActivity::class.java))
+    }
+    fun generics(view: View) {
+        startActivity(Intent(this, GenericsActivity::class.java))
+    }
+    fun singltonPattern(view: View) {
+        startActivity(Intent(this, SingletonActivity::class.java))
+    }
+
+
 
 }

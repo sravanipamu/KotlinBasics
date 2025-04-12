@@ -1,4 +1,4 @@
-package com.sravani.kotlinbasics.lateinitLazy
+package com.sravani.kotlinbasics.lateinitlazy
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

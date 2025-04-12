@@ -1,4 +1,4 @@
-package com.sravani.kotlinbasics.visibilityModifier
+package com.sravani.kotlinbasics.visibilitymodifier
 
 import android.os.Bundle
 import android.widget.Toast

@@ -1,4 +1,9 @@
 package com.sravani.kotlinbasics.extensionFunction
 
-class ExtensionFunction {
+fun String.changeToLowercase() : String{
+    return this.lowercase()
+}
+
+fun Int.isPositive() : Boolean {
+    return this > 0
 }

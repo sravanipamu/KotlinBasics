@@ -12,3 +12,18 @@ object RetrofitBuilder {
             .build()
     }
 }
+
+
+/*class RetrofitBuilder {
+    val instance = null
+
+    static void getRetrofitInstance(){
+        if(instance == null)
+            instance =   Retrofit.Builder()
+                .baseUrl(Constants.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+        return instance
+    }
+
+} */

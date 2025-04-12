@@ -1,4 +1,6 @@
 package com.sravani.kotlinbasics.jvmannotations
 
-class Config {
+object Config {
+    @JvmField
+    var isProduction: Boolean = true
 }

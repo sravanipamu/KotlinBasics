@@ -8,6 +8,7 @@ object NetworkManager : Logger() {
         debug("Network Manager", "Connected to network")
     }
 
+
     fun disconnect() {
         isConnected = false
         debug("Network Manager", "Disconnected from network")

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.util.Function
 import com.sravani.kotlinbasics.R
 
 
@@ -15,14 +16,38 @@ class LamdaHighOrderActivity : AppCompatActivity() {
 
     var dynamicMessage : (String) -> Unit = { it -> println("Welcome $it") }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lamda_high_order)
 
+     /*  var welcomeMessage : Function<Unit, Unit>  = object : Function<Unit, Unit> {
+           override fun apply(value: Unit) {
+               println("Welcome Message")
+           }
+
+       }
+
+        welcomeMessage.apply(Unit)*/
+
         welcomeMessage()
+
+     /*   var dynamicMessage : Function<String, Unit>  = object : Function<String, Unit> {
+            override fun apply(value: String) {
+                println("Welcome Message $value")
+            }
+
+        }
+
+        dynamicMessage.apply(name)*/
+
         dynamicMessage(name)
 
-        // highorder function
+        // highorder function ( lamda passing as function parameter and returning lamda as a return type of the function)
+
+        // lamdas we use mainly in functional interface
+
         setCustomClickAction {
             println("Custom Event Clicked")
         }
@@ -33,12 +58,11 @@ class LamdaHighOrderActivity : AppCompatActivity() {
 
         // functional interface
         findViewById<AppCompatButton>(R.id.click).setOnClickListener {
-            loginUser("admin", "1234", {
-                println("Login Success")
-            })
+
+            //loginUser("admin", "1234")
 
 
-          /*  loginUser("admin", "1234", object : OnLoginCallback {
+            loginUser("admin", "1234", object : OnLoginCallback {
                 override fun onLoginSuccess(username: String) {
                  println("Login Success")
                 }
@@ -46,7 +70,7 @@ class LamdaHighOrderActivity : AppCompatActivity() {
                 override fun onLoginFailure(error: String) {
                     println("Login Failure")
                 }
-            })*/
+            })
         }
 
 
@@ -62,22 +86,22 @@ class LamdaHighOrderActivity : AppCompatActivity() {
     }
 
 
-    fun loginUser(username: String, password: String, callback: OnLoginCallback) {
+   /* fun loginUser(username: String, password: String, callback: OnLoginCallback) {
         if (username == "admin" && password == "1234") {
             callback.onLoginSuccess(username)
         }
-    }
+    }*/
 
-   /* fun loginUser(username: String, password: String, callback: OnLoginCallback) {
+    fun loginUser(username: String, password: String, callback: OnLoginCallback) {
         if (username == "admin" && password == "1234") {
             callback.onLoginSuccess(username)
         } else{
             callback.onLoginFailure("invalid name")
         }
-    }*/
+    }
 
-   fun  interface OnLoginCallback {
+     interface OnLoginCallback {
         fun onLoginSuccess(username: String)
-       // fun onLoginFailure(error : String)
+        fun onLoginFailure(error : String)
     }
 }

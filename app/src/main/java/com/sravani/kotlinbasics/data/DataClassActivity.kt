@@ -7,8 +7,10 @@ class DataClassActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val user1 = User("Jhon", 25)
         val user2 = User("Jhon", 25)
+
         val user3 = user2
 
 
@@ -26,7 +28,7 @@ class DataClassActivity : AppCompatActivity() {
 
 
         // copy()
-        val user4 = user1.copy()
+        val user4 = user1.copy() //shallow copy
 
         println("user4 $user4")
 

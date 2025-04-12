@@ -1,4 +1,7 @@
 package com.sravani.kotlinbasics.jvmannotations
 
-class Debugger {
+object Debugger {
+    fun log(message: String) {
+        println("LOG: $message")
+    }
 }

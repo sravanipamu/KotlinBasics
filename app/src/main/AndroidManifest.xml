@@ -23,13 +23,19 @@
         </activity>
         <activity android:name=".variables.VariableActivity" />
         <activity android:name=".nullsafty.NullsaftyActivity" />
-        <activity android:name=".constKeyword.ConstKeywordActivity" />
-        <activity android:name=".lateinitLazy.LateinitLazyActivity" />
-        <activity android:name=".visibilityModifier.VisibilityModifier" />
+        <activity android:name=".constkeyword.ConstKeywordActivity" />
+        <activity android:name=".lateinitlazy.LateinitLazyActivity" />
+        <activity android:name=".visibilitymodifier.VisibilityModifier" />
         <activity android:name=".lamdaHighOrder.LamdaHighOrderActivity" />
         <activity android:name=".objects.ObjectCompanionObjectActivity" />
         <activity android:name=".inline.InlineFunctionsActivity" />
         <activity android:name=".data.DataClassActivity" />
+        <activity android:name=".jvmannotations.JVMAnnotationsActivity" />
+        <activity android:name=".init.InitBlockActivity" />
+        <activity android:name=".extensionFunction.ExtensionFunctionActivity" />
+        <activity android:name=".infix.InfixNotationActivity" />
+        <activity android:name=".generics.GenericsActivity" />
+        <activity android:name=".singletonpattern.SingletonActivity" />
     </application>
 
 </manifest>

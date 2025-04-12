@@ -1,3 +1,7 @@
 package com.sravani.kotlinbasics.data
 
-data class User (var name : String, var age : Int)
+data class User (var name : String) {
+
+     constructor( name: String,  age: Int) : this(name)
+  
+}

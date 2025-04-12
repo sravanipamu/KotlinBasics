@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.widget.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="Variable"
         android:onClick="variable"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Null Safty"
         android:onClick="NullSafty"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/variable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Const Keyword"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:onClick="constKeyword"
         app:layout_constraintTop_toBottomOf="@+id/null_safty"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lateinit and Lazy"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:onClick="lateinitlazy"
         app:layout_constraintTop_toBottomOf="@+id/const_keyword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +64,7 @@
         android:layout_height="wrap_content"
         android:text="Visibility Modifier"
         android:onClick="visibility"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/lateinit_lazy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -71,7 +75,7 @@
         android:layout_height="wrap_content"
         android:text="Lamda HighOrder"
         android:onClick="lamdaHighOrder"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/visibility_modifier"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -82,7 +86,7 @@
         android:layout_height="wrap_content"
         android:text="Object"
         android:onClick="objectCompanionObject"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/lamda_highorder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -93,7 +97,7 @@
         android:layout_height="wrap_content"
         android:text="Inline Functions"
         android:onClick="inlineFunctions"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/object"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -104,9 +108,76 @@
         android:layout_height="wrap_content"
         android:text="Data Class"
         android:onClick="dataClass"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/inline_functions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jvm_annotations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JVM Annontations"
+        android:onClick="jvmAnnotations"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/data_class"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/init_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Init Block"
+        android:onClick="initBlock"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/jvm_annotations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/extension_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extension Function"
+        android:onClick="extensionFunction"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/init_block"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/infixNotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Infix"
+        android:onClick="infixNotation"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/extension_function"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/generics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generics"
+        android:onClick="generics"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/infixNotation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/singletonPattern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Singleton Pattern"
+        android:onClick="singltonPattern"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/generics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</android.widget.ScrollView>
