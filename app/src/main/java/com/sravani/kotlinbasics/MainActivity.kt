@@ -16,6 +16,8 @@ import com.sravani.kotlinbasics.lamdaHighOrder.LamdaHighOrderActivity
 import com.sravani.kotlinbasics.lateinitlazy.LateinitLazyActivity
 import com.sravani.kotlinbasics.nullsafty.NullsaftyActivity
 import com.sravani.kotlinbasics.objects.ObjectCompanionObjectActivity
+import com.sravani.kotlinbasics.scopefunctions.ScopeFunctionsActivity
+import com.sravani.kotlinbasics.sealed.SealedActivity
 import com.sravani.kotlinbasics.singletonpattern.SingletonActivity
 import com.sravani.kotlinbasics.variables.VariableActivity
 import com.sravani.kotlinbasics.visibilitymodifier.VisibilityModifier
@@ -78,13 +80,21 @@ class MainActivity : AppCompatActivity() {
     fun infixNotation(view: View) {
         startActivity(Intent(this, InfixNotationActivity::class.java))
     }
+
     fun generics(view: View) {
         startActivity(Intent(this, GenericsActivity::class.java))
     }
-    fun singltonPattern(view: View) {
+
+    fun singletonPattern(view: View) {
         startActivity(Intent(this, SingletonActivity::class.java))
     }
 
+    fun sealedClasses(view: View) {
+        startActivity(Intent(this, SealedActivity::class.java))
+    }
 
+    fun scopeFunctions(view: View) {
+        startActivity(Intent(this, ScopeFunctionsActivity::class.java))
+    }
 
 }

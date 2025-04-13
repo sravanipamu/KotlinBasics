@@ -36,6 +36,8 @@
         <activity android:name=".infix.InfixNotationActivity" />
         <activity android:name=".generics.GenericsActivity" />
         <activity android:name=".singletonpattern.SingletonActivity" />
+        <activity android:name=".sealed.SealedActivity" />
+        <activity android:name=".scopefunctions.ScopeFunctionsActivity" />
     </application>
 
 </manifest>

@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 class ExtensionFunctionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var name = "jhon"
+        var name = "JHON"
         println(name.changeToLowercase())
     }
 }

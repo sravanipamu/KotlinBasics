@@ -23,7 +23,7 @@ public class JVMAnnotationsJavaActivity  extends AppCompatActivity {
 
         notifier.notifyUser("Server restarted");
 
-        if(Config.isProduction) {
+        if(Config.isProduction()) {
             Debugger.INSTANCE.log("JVMAnnotationsActivity");
         }
     }
