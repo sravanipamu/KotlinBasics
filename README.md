@@ -15,3 +15,18 @@
 13. `crossinline`  
 14. `noinline`  
 15. `data class`
+16. `@Jvmstatic`
+17. `@Jvmoverload`
+18. `@Jvmfield` 
+19. `Init`
+20. Extension function 
+21. `Infix` notation 
+22. Generics 
+23. Singleton pattern
+24. `Sealed` classes
+25. Scope functions
+26. `reified` 
+27. New functions of String in kotlin
+28. List in kotlin
+29. Difference between `listof` and `arrayof` in kotlin
+30. New functions in `list` (remove duplicates, AssociateBy, partition, filter, find, map, reversed, sorted etc )
