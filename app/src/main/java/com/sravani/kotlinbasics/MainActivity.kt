@@ -14,8 +14,11 @@ import com.sravani.kotlinbasics.inline.InlineFunctionsActivity
 import com.sravani.kotlinbasics.jvmannotations.JVMAnnotationsActivity
 import com.sravani.kotlinbasics.lamdaHighOrder.LamdaHighOrderActivity
 import com.sravani.kotlinbasics.lateinitlazy.LateinitLazyActivity
+import com.sravani.kotlinbasics.listtypes.ListTypesActivity
+import com.sravani.kotlinbasics.newfunctions.StringFunctionsActivity
 import com.sravani.kotlinbasics.nullsafty.NullsaftyActivity
 import com.sravani.kotlinbasics.objects.ObjectCompanionObjectActivity
+import com.sravani.kotlinbasics.reified.ReifiedActivity
 import com.sravani.kotlinbasics.scopefunctions.ScopeFunctionsActivity
 import com.sravani.kotlinbasics.sealed.SealedActivity
 import com.sravani.kotlinbasics.singletonpattern.SingletonActivity
@@ -95,6 +98,17 @@ class MainActivity : AppCompatActivity() {
 
     fun scopeFunctions(view: View) {
         startActivity(Intent(this, ScopeFunctionsActivity::class.java))
+    }
+
+    fun stringFunctions(view: View) {
+        startActivity(Intent(this, StringFunctionsActivity::class.java))
+    }
+    fun listKotlin(view: View) {
+        startActivity(Intent(this, ListTypesActivity::class.java))
+    }
+
+    fun reified(view: View) {
+        startActivity(Intent(this, ReifiedActivity::class.java))
     }
 
 }

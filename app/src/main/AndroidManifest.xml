@@ -38,6 +38,9 @@
         <activity android:name=".singletonpattern.SingletonActivity" />
         <activity android:name=".sealed.SealedActivity" />
         <activity android:name=".scopefunctions.ScopeFunctionsActivity" />
+        <activity android:name=".newfunctions.StringFunctionsActivity" />
+        <activity android:name=".listtypes.ListTypesActivity" />
+        <activity android:name=".reified.ReifiedActivity" />
     </application>
 
 </manifest>

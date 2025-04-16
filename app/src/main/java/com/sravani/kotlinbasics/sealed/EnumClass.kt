@@ -1,7 +1,7 @@
 package com.sravani.kotlinbasics.sealed
 
 class NormalClass {
-    companion object {
+     companion object {
        val HOME_SCREEN = "Home_Screen"
        val LIVE_SCREEN = "Live_Screen"
        val PLAYER_SCREEN = "Player_Screen"
@@ -10,9 +10,13 @@ class NormalClass {
     }
 }
 
+
+
+
+
 // restricted set of same constant data types we use enums
 enum class ScreenEnum {
-    HOME_SCREEN, LIVE_SCREEN, PLAYER_SCREEN, SETTINGS_SCREEN
+    HOME_SCREEN, LIVE_SCREEN, PLAYER_SCREEN, SETTINGS_SCREEN,
 }
 
 // sealed class
@@ -26,6 +30,7 @@ sealed class ScreenSealed {
     object PLAYER_SCREEN : ScreenSealed()
     object SETTINGS_SCREEN : ScreenSealed()
 }
+
 
 
 // sealed class with data
@@ -61,4 +66,11 @@ abstract class ScreenSealed {
         public static final SETTINGS_SCREEN INSTANCE = new SETTINGS_SCREEN();
     }
 }*/
+
+
+sealed class UIState {
+    object Loading : UIState()
+    data class success(val data : String)  : UIState()
+    data class failure(val message : String) : UIState()
+}
 

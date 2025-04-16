@@ -7,11 +7,19 @@ class SealedActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        navigateToScreen(ScreenEnum.HOME_SCREEN)
         navigateToScreen(NormalClass.HOME_SCREEN)
+        navigateToScreen(ScreenEnum.HOME_SCREEN)
         navigateToScreen(ScreenSealed.HOME_SCREEN)
         navigateToScreen(ScreenSealedData.SETTINGS_SCREEN(false))
+        navigateToScreen(ScreenSealedData.SETTINGS_SCREEN(true))
+        var screen = UIState.success("list of users")
+        var screen2 = UIState.success("list of languages")
+        screen.data
+        screen2.data
+
+
         navigateToScreen(ScreenSealedInterface.HOME_SCREEN)
+
     }
 
     // normal  execution
@@ -50,7 +58,7 @@ class SealedActivity : AppCompatActivity() {
         when(screen) {
             ScreenSealedData.HOME_SCREEN -> println("navigating to home screen")
             ScreenSealedData.LIVE_SCREEN -> println("navigating to live screen")
-            ScreenSealedData.PLAYER_SCREEN -> println("navigating to player screen ")
+            ScreenSealedData.PLAYER_SCREEN -> println("navigating to player screen  ${screen.title}")
             is ScreenSealedData.SETTINGS_SCREEN -> println("navigating to settings screen ${screen.darkModeEnable}")
         }
     }
